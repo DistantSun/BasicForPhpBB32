@@ -1,0 +1,103 @@
+// Defines the base path to the scheme specific image folders
+// needed in @function m-fetch-image
+$image-scheme-path: './images';
+
+
+// Mapping colour schemes
+$colours: (
+  aqua: aqua,
+  basic: basic,
+  darkblue: darkblue,
+  darkgreen: darkgreen,
+  green: green,
+  lightgreen: lightgreen,
+  orange: orange,
+  red: red,
+);
+
+
+// Listing of all image names proper (without suffix!)
+// Needed to automate the definition of corresponding class names and image paths
+$naming-list: (
+  announce_read,
+  announce_read_hd,
+  announce_read_locked,
+  announce_read_locked_hd,
+  announce_unread,
+  announce_unread_hd,
+  announce_unread_locked,
+  announce_unread_locked_hd,
+  forum_link,
+  forum_link_hd,
+  forum_page,
+  forum_page_hd,
+  forum_read,
+  forum_read_hd,
+  forum_read_locked,
+  forum_read_locked_hd,
+  forum_read_subforum,
+  forum_read_subforum_hd,
+  forum_unread,
+  forum_unread_hd,
+  forum_unread_locked,
+  forum_unread_locked_hd,
+  forum_unread_subforum,
+  forum_unread_subforum_hd,
+  icon_post_target,
+  icon_post_target_hd,
+  icon_post_target_unread,
+  icon_post_target_unread_hd,
+  no_avatar,
+  no_avatar_hd,
+  no_avatar_female,
+  no_avatar_female_hd,
+  no_avatar_male,
+  no_avatar_male_hd,
+  subforum_read,
+  subforum_read_hd,
+  subforum_unread,
+  subforum_unread_hd,
+  topic_moved,
+  topic_moved_hd,
+  topic_read,
+  topic_read_hd,
+  topic_read_hot,
+  topic_read_hot_hd,
+  topic_read_hot_mine,
+  topic_read_hot_mine_hd,
+  topic_read_locked,
+  topic_read_locked_hd,
+  topic_read_locked_mine,
+  topic_read_locked_mine_hd,
+  topic_read_mine,
+  topic_read_mine_hd,
+  topic_unread,
+  topic_unread_hd,
+  topic_unread_hot,
+  topic_unread_hot_hd,
+  topic_unread_hot_mine,
+  topic_unread_hot_mine_hd,
+  topic_unread_locked,
+  topic_unread_locked_hd,
+  topic_unread_locked_mine,
+  topic_unread_locked_mine_hd,
+  topic_unread_mine,
+  topic_unread_mine_hd,
+);
+
+
+// Let's get it working ....
+// Create image source links depending on currently defined colour scheme
+@function m-fetch-image($file, $scheme: null) {
+  $scheme: map-get(($colours), $color-scheme);
+  @return url($image-scheme-path + '/' + $scheme + '/' + $file + '.png');
+}
+
+// Finally outputs classes and correspunding background-image values
+@each $name in $naming-list {
+  $i: index($naming-list, $name);
+
+  .#{$name} {
+    background-image: m-fetch-image(#{$name});
+  }
+}

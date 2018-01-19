@@ -221,7 +221,7 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
 	background-color: $block-background2;
 }
 
-.bg3 { 
+.bg3 {
 	background-color: $block-background3;
 	&.panel {
 		background-color: $tab-selected-background;
@@ -557,8 +557,8 @@ p.post-notice.reported:before, p.post-notice.error:before {
 a { color: $link-color; }
 a:hover	{ color: $link-hover-color; }
 
-a.time { 
-	color: $faint-color; 
+a.time {
+	color: $faint-color;
 	&:hover {
 		color: $link-hover-color;
 	}
@@ -932,15 +932,15 @@ dd.profile-warnings {
 	}
 }
 
-.dropdown-select:after { 
-	border-color: $button-border; 
+.dropdown-select:after {
+	border-color: $button-border;
 }
-.dropdown-select:hover	{ 
-	border-color: $button-border; 
+.dropdown-select:hover	{
+	border-color: $button-border;
 }
 
-.dropdown-select:hover:after, .dropdown-visible .dropdown-select:after, .nojs .dropdown-container:hover .dropdown-select:after	{ 
-	border-color: transparent; 
+.dropdown-select:hover:after, .dropdown-visible .dropdown-select:after, .nojs .dropdown-container:hover .dropdown-select:after	{
+	border-color: transparent;
 }
 
 .dropdown-visible .dropdown-select, .dropdown-visible .dropdown-select:hover, .nojs .dropdown-container:hover .dropdown-select,
@@ -992,7 +992,7 @@ dd.profile-warnings {
 }
 
 .phpbb_wlm-icon:after {
-	color: #75afd3;
+	color: m-color(wlm-icon-after, #{$color-scheme});
 }
 
 .phpbb_aol-icon:after {
@@ -1300,15 +1300,15 @@ dl.mini dt {
 }
 
 .pmlist li.pm_marked_colour, .pm_marked_colour {
-	border-color: #FF6600;
+	border-color: m-color(pm-marked, #{$color-scheme});
 }
 
 .pmlist li.pm_replied_colour, .pm_replied_colour {
-	border-color: #A9B8C2;
+	border-color: m-color(pm-replied, #{$color-scheme});
 }
 
 .pmlist li.pm_friend_colour, .pm_friend_colour {
-	border-color: #5D8FBD;
+	border-color: m-color(pm-friend, #{$color-scheme});
 }
 
 .pmlist li.pm_foe_colour, .pm_foe_colour {

@@ -9,7 +9,7 @@
 //
 //	Set your custom configuration variables in _custom_config.scss
 //	Add your custom code to _custom.scss
-//	
+//
 //	After editing any .scss file you must recompile stylesheet.
 //
 /*!
@@ -20,6 +20,8 @@
 */
 @import "custom_config";
 @import "style_config";
+@import "functions_colours";
+@import "mixins";
 @import "common/common";
 @import "common/links";
 @import "common/content";
@@ -29,8 +31,8 @@
 @import "common/imageset";
 @import "common/responsive";
 @import "colours";
+@import "new_images";
 @import "custom";
 @import "common/icons";
 @import "common/normalize";
 @import "common/utilities";
-
